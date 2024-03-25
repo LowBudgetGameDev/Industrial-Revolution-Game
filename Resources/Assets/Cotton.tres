@@ -14,3 +14,4 @@ name = "Cotton"
 sprite = SubResource("AtlasTexture_5yqkc")
 sell_price = 10
 work_background = ExtResource("3_re0da")
+type_of_worker = 1

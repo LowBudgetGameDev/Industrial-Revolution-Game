@@ -7,3 +7,5 @@ class_name Worker
 @export var buy_price: int
 @export var salary: int
 @export var production_time_days: int
+@export var miner: PackedScene
+@export var farmer: PackedScene

@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Worker" load_steps=3 format=3 uid="uid://7snyddgru0de"]
+[gd_resource type="Resource" script_class="Worker" load_steps=5 format=3 uid="uid://7snyddgru0de"]
 
 [ext_resource type="Script" path="res://Scripts/Worker.gd" id="1_cgct0"]
+[ext_resource type="PackedScene" uid="uid://76rta748hefa" path="res://Scenes/Humans/Farmers/AdultFarmer.tscn" id="1_mgxd4"]
 [ext_resource type="PackedScene" uid="uid://cpwbnemp1pynd" path="res://Scenes/Humans/Adult.tscn" id="2_6cptc"]
+[ext_resource type="PackedScene" uid="uid://ci7yjfr86xdiy" path="res://Scenes/Humans/Miners/AdultMiner.tscn" id="2_x6ba4"]
 
 [resource]
 script = ExtResource("1_cgct0")
@@ -10,3 +12,5 @@ sprite = ExtResource("2_6cptc")
 buy_price = 50
 salary = 10
 production_time_days = 1
+miner = ExtResource("2_x6ba4")
+farmer = ExtResource("1_mgxd4")

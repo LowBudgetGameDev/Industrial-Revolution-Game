@@ -14,3 +14,4 @@ name = "Gold"
 sprite = SubResource("AtlasTexture_5yqkc")
 sell_price = 18
 work_background = ExtResource("3_frqh3")
+type_of_worker = 0

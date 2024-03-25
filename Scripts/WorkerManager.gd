@@ -3,6 +3,7 @@ extends Node
 class_name WorkerManager
 
 enum Worker_Enum {Child, Slave, Immigrant, Adult}
+enum Worker_Type {Miner, Farmer, Factory}
 
 static var instance : WorkerManager
 

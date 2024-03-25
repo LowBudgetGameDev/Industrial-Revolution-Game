@@ -1,12 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cyvr0h13qjq25"]
+[gd_scene load_steps=5 format=3 uid="uid://cyvr0h13qjq25"]
 
 [ext_resource type="FontFile" uid="uid://ci0jnk7m1rmj4" path="res://Fonts/Roboto-Regular.ttf" id="1_e46on"]
 [ext_resource type="Script" path="res://Scripts/AssetWorkerUI.gd" id="1_wyaby"]
 [ext_resource type="PackedScene" uid="uid://d3mvnco5dxdek" path="res://Scenes/SignalEmitter.tscn" id="2_2x7rx"]
 [ext_resource type="Texture2D" uid="uid://t8wldb71dwi8" path="res://Textures/Cartoon Field Background.jpg" id="3_51mxx"]
-[ext_resource type="PackedScene" uid="uid://dfbybnn1ptw2x" path="res://Scenes/Humans/Miner.tscn" id="4_coo4r"]
 
-[node name="AssetWorkerUI" type="Control" node_paths=PackedStringArray("asset_icon", "asset_amount_text", "click_button", "background")]
+[node name="AssetWorkerUI" type="Control" node_paths=PackedStringArray("asset_icon", "asset_amount_text", "click_button", "background", "worker_group")]
 custom_minimum_size = Vector2(640, 320)
 layout_mode = 3
 anchors_preset = 15
@@ -22,6 +21,7 @@ asset_amount_text = NodePath("AssetInfo/AssetAmountText")
 click_button = NodePath("ClickButton")
 background = NodePath("Background")
 signal_emmiter = ExtResource("2_2x7rx")
+worker_group = NodePath("ScrollContainer/WorkerContainer")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -83,18 +83,6 @@ offset_bottom = 270.0
 follow_focus = true
 
 [node name="WorkerContainer" type="HBoxContainer" parent="ScrollContainer"]
-layout_mode = 2
-
-[node name="Miner" parent="ScrollContainer/WorkerContainer" instance=ExtResource("4_coo4r")]
-layout_mode = 2
-
-[node name="Miner2" parent="ScrollContainer/WorkerContainer" instance=ExtResource("4_coo4r")]
-layout_mode = 2
-
-[node name="Miner3" parent="ScrollContainer/WorkerContainer" instance=ExtResource("4_coo4r")]
-layout_mode = 2
-
-[node name="Miner4" parent="ScrollContainer/WorkerContainer" instance=ExtResource("4_coo4r")]
 layout_mode = 2
 
 [node name="ClickButton" type="TextureButton" parent="."]

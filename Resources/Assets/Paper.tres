@@ -14,3 +14,4 @@ name = "Paper"
 sprite = SubResource("AtlasTexture_5yqkc")
 sell_price = 5
 work_background = ExtResource("3_c7nv8")
+type_of_worker = 2

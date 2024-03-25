@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://0ss2qewa40fs"]
+
+[ext_resource type="PackedScene" uid="uid://cubevjlwqssvb" path="res://Scenes/Humans/Slave.tscn" id="1_8m220"]
+[ext_resource type="Texture2D" uid="uid://bq5u5q46boifc" path="res://Textures/Pickaxe.png" id="2_6o012"]
+
+[sub_resource type="Animation" id="Animation_emiv1"]
+resource_name = "Mining"
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pickaxe:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -1.0472, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dyoan"]
+_data = {
+"Mining": SubResource("Animation_emiv1")
+}
+
+[node name="Miner" type="Control"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -75.0
+offset_right = -2805.0
+offset_bottom = -1545.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Human" parent="." instance=ExtResource("1_8m220")]
+layout_mode = 1
+offset_left = 60.4
+offset_top = 15.6
+offset_right = 166.4
+offset_bottom = 249.6
+scale = Vector2(0.35, 0.35)
+
+[node name="Pickaxe" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 37.0
+offset_right = 115.0
+offset_bottom = 127.0
+pivot_offset = Vector2(45, 80)
+texture = ExtResource("2_6o012")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dyoan")
+}
+autoplay = "Mining"

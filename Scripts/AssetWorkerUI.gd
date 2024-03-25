@@ -6,6 +6,7 @@ extends Control
 @export var click_button : TextureButton
 @export var background : TextureRect
 @export var signal_emmiter : PackedScene
+@export var worker_group : HBoxContainer
 
 var _worker_dictionary : Dictionary = {}
 
@@ -32,6 +33,7 @@ func _on_click():
 		_worker_dictionary[hired_ui.get_selected_worker()] += 1
 	else:
 		_worker_dictionary[hired_ui.get_selected_worker()] = 1
+		_add_worker(hired_ui.get_selected_worker())
 	
 	WorkerManager.instance.put_to_work(hired_ui.get_selected_worker())
 
@@ -42,6 +44,18 @@ func _on_click():
 	sig_emi.repeated_signal.connect(self._gain_asset)
 	
 	hired_ui.deselect_worker()
+
+func _add_worker(worker: Worker):
+	var wor
+
+	match work_asset.type_of_worker:
+		WorkerManager.Worker_Type.Miner:
+			wor = worker.miner.instantiate()
+		WorkerManager.Worker_Type.Farmer:
+			wor = worker.farmer.instantiate()
+	
+	worker_group.add_child(wor)
+
 
 func _gain_asset(asset: Asset):
 	AssetManager.instance.increase_asset_amount(work_asset, 1)

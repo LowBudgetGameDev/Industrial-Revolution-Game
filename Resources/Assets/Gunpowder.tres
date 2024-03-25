@@ -14,3 +14,4 @@ name = "Gunpowder"
 sprite = SubResource("AtlasTexture_5yqkc")
 sell_price = 0
 work_background = ExtResource("3_xsl2x")
+type_of_worker = 2

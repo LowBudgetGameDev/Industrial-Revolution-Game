@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Worker" load_steps=3 format=3 uid="uid://drpsfb0qivc7d"]
+[gd_resource type="Resource" script_class="Worker" load_steps=5 format=3 uid="uid://drpsfb0qivc7d"]
 
+[ext_resource type="PackedScene" uid="uid://dlc4bmigcvlth" path="res://Scenes/Humans/Farmers/SlaveFarmer.tscn" id="1_7gsw0"]
 [ext_resource type="Script" path="res://Scripts/Worker.gd" id="1_hlaeo"]
+[ext_resource type="PackedScene" uid="uid://0ss2qewa40fs" path="res://Scenes/Humans/Miners/SlaveMiner.tscn" id="2_ijfh1"]
 [ext_resource type="PackedScene" uid="uid://cubevjlwqssvb" path="res://Scenes/Humans/Slave.tscn" id="2_jsxs4"]
 
 [resource]
@@ -10,3 +12,5 @@ sprite = ExtResource("2_jsxs4")
 buy_price = 3
 salary = 1
 production_time_days = 5
+miner = ExtResource("2_ijfh1")
+farmer = ExtResource("1_7gsw0")
