@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Worker" load_steps=5 format=3 uid="uid://7snyddgru0de"]
+[gd_resource type="Resource" script_class="Worker" load_steps=6 format=3 uid="uid://7snyddgru0de"]
 
 [ext_resource type="Script" path="res://Scripts/Worker.gd" id="1_cgct0"]
+[ext_resource type="PackedScene" uid="uid://b447u3n2tpq6a" path="res://Scenes/Humans/Factory/AdultFactory.tscn" id="1_fcf4g"]
 [ext_resource type="PackedScene" uid="uid://76rta748hefa" path="res://Scenes/Humans/Farmers/AdultFarmer.tscn" id="1_mgxd4"]
 [ext_resource type="PackedScene" uid="uid://cpwbnemp1pynd" path="res://Scenes/Humans/Adult.tscn" id="2_6cptc"]
 [ext_resource type="PackedScene" uid="uid://ci7yjfr86xdiy" path="res://Scenes/Humans/Miners/AdultMiner.tscn" id="2_x6ba4"]
@@ -14,3 +15,4 @@ salary = 2.0
 production_time_days = 1
 miner = ExtResource("2_x6ba4")
 farmer = ExtResource("1_mgxd4")
+factory = ExtResource("1_fcf4g")

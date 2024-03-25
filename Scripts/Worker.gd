@@ -9,3 +9,4 @@ class_name Worker
 @export var production_time_days: float
 @export var miner: PackedScene
 @export var farmer: PackedScene
+@export var factory: PackedScene

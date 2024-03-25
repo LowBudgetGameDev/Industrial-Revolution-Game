@@ -72,6 +72,8 @@ func _add_worker(worker: Worker):
 			wor = worker.miner.instantiate()
 		WorkerManager.Worker_Type.Farmer:
 			wor = worker.farmer.instantiate()
+		WorkerManager.Worker_Type.Factory:
+			wor = worker.factory.instantiate()
 	
 	worker_group.add_child(wor)
 

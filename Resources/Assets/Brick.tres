@@ -14,5 +14,5 @@ name = "Brick"
 sprite = SubResource("AtlasTexture_5yqkc")
 sell_price = 0.1
 work_background = ExtResource("3_6vga7")
-type_of_worker = 0
+type_of_worker = 2
 unlock_amount = 10.0

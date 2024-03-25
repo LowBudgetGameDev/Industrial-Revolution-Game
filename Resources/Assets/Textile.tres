@@ -14,5 +14,5 @@ name = "Textile"
 sprite = SubResource("AtlasTexture_5yqkc")
 sell_price = 25.0
 work_background = ExtResource("3_nm4fl")
-type_of_worker = 0
+type_of_worker = 2
 unlock_amount = 2500.0
