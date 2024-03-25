@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyvr0h13qjq25"]
+[gd_scene load_steps=5 format=3 uid="uid://cyvr0h13qjq25"]
 
 [ext_resource type="FontFile" uid="uid://ci0jnk7m1rmj4" path="res://Fonts/Roboto-Regular.ttf" id="1_e46on"]
 [ext_resource type="Script" path="res://Scripts/AssetWorkerUI.gd" id="1_wyaby"]
 [ext_resource type="PackedScene" uid="uid://d3mvnco5dxdek" path="res://Scenes/SignalEmitter.tscn" id="2_2x7rx"]
+[ext_resource type="PackedScene" uid="uid://dfbybnn1ptw2x" path="res://Scenes/Humans/Miner.tscn" id="4_coo4r"]
 
 [node name="AssetWorkerUI" type="Control" node_paths=PackedStringArray("asset_icon", "asset_amount_text", "click_button")]
 custom_minimum_size = Vector2(640, 320)
@@ -76,6 +77,19 @@ offset_left = 64.0
 offset_top = 80.0
 offset_right = 624.0
 offset_bottom = 305.0
+follow_focus = true
 
 [node name="WorkerContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Miner" parent="ScrollContainer/WorkerContainer" instance=ExtResource("4_coo4r")]
+visible = false
+layout_mode = 2
+
+[node name="Miner2" parent="ScrollContainer/WorkerContainer" instance=ExtResource("4_coo4r")]
+visible = false
+layout_mode = 2
+
+[node name="Miner3" parent="ScrollContainer/WorkerContainer" instance=ExtResource("4_coo4r")]
+visible = false
 layout_mode = 2
