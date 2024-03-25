@@ -4,6 +4,7 @@ extends Control
 @export var asset_amount_text: RichTextLabel
 @export var work_asset: Asset
 @export var click_button : TextureButton
+@export var background : TextureRect
 @export var signal_emmiter : PackedScene
 
 var _worker_dictionary : Dictionary = {}
@@ -14,6 +15,7 @@ func _ready():
 
 func init():
 	asset_icon.texture = work_asset.sprite
+	background.texture = work_asset.work_background
 	asset_amount_text.text = "x" + str(AssetManager.instance.get_asset_amount(work_asset))
 	AssetManager.instance.on_asset_amount_changed.connect(self._update_text)
 

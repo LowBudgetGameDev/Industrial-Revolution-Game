@@ -21,7 +21,8 @@ func _process(delta):
 	_update_delay_bar()
 
 	if _timer < 0.0:
-		MoneyManager.instance.gain_money(1)
+		if RandomNumberGenerator.new().randi_range(0, 100) > 50:
+			MoneyManager.instance.gain_money(1)
 		button.disabled = false
 
 func _produce():

@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Asset" load_steps=4 format=3 uid="uid://dkb163hho323y"]
+[gd_resource type="Resource" script_class="Asset" load_steps=5 format=3 uid="uid://dkb163hho323y"]
 
 [ext_resource type="Script" path="res://Scripts/Asset.gd" id="1_gwupx"]
 [ext_resource type="Texture2D" uid="uid://cuhedfiy8cfl2" path="res://Textures/Resources.png" id="2_lpoon"]
+[ext_resource type="Texture2D" uid="uid://0cg0mmobmtax" path="res://Textures/Factory Background.jpg" id="3_xsl2x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5yqkc"]
 atlas = ExtResource("2_lpoon")
@@ -11,3 +12,5 @@ region = Rect2(512, 512, 256, 256)
 script = ExtResource("1_gwupx")
 name = "Gunpowder"
 sprite = SubResource("AtlasTexture_5yqkc")
+sell_price = 0
+work_background = ExtResource("3_xsl2x")

@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyvr0h13qjq25"]
+[gd_scene load_steps=6 format=3 uid="uid://cyvr0h13qjq25"]
 
 [ext_resource type="FontFile" uid="uid://ci0jnk7m1rmj4" path="res://Fonts/Roboto-Regular.ttf" id="1_e46on"]
 [ext_resource type="Script" path="res://Scripts/AssetWorkerUI.gd" id="1_wyaby"]
 [ext_resource type="PackedScene" uid="uid://d3mvnco5dxdek" path="res://Scenes/SignalEmitter.tscn" id="2_2x7rx"]
+[ext_resource type="Texture2D" uid="uid://t8wldb71dwi8" path="res://Textures/Cartoon Field Background.jpg" id="3_51mxx"]
 [ext_resource type="PackedScene" uid="uid://dfbybnn1ptw2x" path="res://Scenes/Humans/Miner.tscn" id="4_coo4r"]
 
-[node name="AssetWorkerUI" type="Control" node_paths=PackedStringArray("asset_icon", "asset_amount_text", "click_button")]
+[node name="AssetWorkerUI" type="Control" node_paths=PackedStringArray("asset_icon", "asset_amount_text", "click_button", "background")]
 custom_minimum_size = Vector2(640, 320)
 layout_mode = 3
 anchors_preset = 15
@@ -19,22 +20,32 @@ script = ExtResource("1_wyaby")
 asset_icon = NodePath("AssetInfo/AssetIcon")
 asset_amount_text = NodePath("AssetInfo/AssetAmountText")
 click_button = NodePath("ClickButton")
+background = NodePath("Background")
 signal_emmiter = ExtResource("2_2x7rx")
 
-[node name="Background" type="Panel" parent="."]
-self_modulate = Color(0, 0, 1, 1)
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("3_51mxx")
+expand_mode = 1
 
 [node name="AssetInfo" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 0
 offset_right = 384.0
 offset_bottom = 96.0
+
+[node name="AssetBackground" type="Panel" parent="AssetInfo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AssetIcon" type="TextureRect" parent="AssetInfo"]
 layout_mode = 1

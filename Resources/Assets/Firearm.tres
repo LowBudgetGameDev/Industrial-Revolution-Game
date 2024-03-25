@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Asset" load_steps=4 format=3 uid="uid://bdw2k38ajx3uq"]
+[gd_resource type="Resource" script_class="Asset" load_steps=5 format=3 uid="uid://bdw2k38ajx3uq"]
 
 [ext_resource type="Script" path="res://Scripts/Asset.gd" id="1_pb7b4"]
 [ext_resource type="Texture2D" uid="uid://cuhedfiy8cfl2" path="res://Textures/Resources.png" id="2_vqwup"]
+[ext_resource type="Texture2D" uid="uid://0cg0mmobmtax" path="res://Textures/Factory Background.jpg" id="3_ukdsh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5yqkc"]
 atlas = ExtResource("2_vqwup")
@@ -11,3 +12,5 @@ region = Rect2(768, 512, 256, 256)
 script = ExtResource("1_pb7b4")
 name = "Firearm"
 sprite = SubResource("AtlasTexture_5yqkc")
+sell_price = 0
+work_background = ExtResource("3_ukdsh")

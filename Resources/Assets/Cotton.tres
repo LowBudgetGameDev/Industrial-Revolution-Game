@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Asset" load_steps=4 format=3 uid="uid://dgecmj2gs4lm1"]
+[gd_resource type="Resource" script_class="Asset" load_steps=5 format=3 uid="uid://dgecmj2gs4lm1"]
 
 [ext_resource type="Script" path="res://Scripts/Asset.gd" id="1_v0duf"]
 [ext_resource type="Texture2D" uid="uid://cuhedfiy8cfl2" path="res://Textures/Resources.png" id="2_l8ahj"]
+[ext_resource type="Texture2D" uid="uid://t8wldb71dwi8" path="res://Textures/Cartoon Field Background.jpg" id="3_re0da"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5yqkc"]
 atlas = ExtResource("2_l8ahj")
@@ -11,3 +12,5 @@ region = Rect2(512, 0, 256, 256)
 script = ExtResource("1_v0duf")
 name = "Cotton"
 sprite = SubResource("AtlasTexture_5yqkc")
+sell_price = 0
+work_background = ExtResource("3_re0da")

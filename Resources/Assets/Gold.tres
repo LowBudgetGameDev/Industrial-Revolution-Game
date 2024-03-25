@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Asset" load_steps=4 format=3 uid="uid://im0ab3uh144a"]
+[gd_resource type="Resource" script_class="Asset" load_steps=5 format=3 uid="uid://im0ab3uh144a"]
 
 [ext_resource type="Script" path="res://Scripts/Asset.gd" id="1_mn2cg"]
 [ext_resource type="Texture2D" uid="uid://cuhedfiy8cfl2" path="res://Textures/Resources.png" id="2_5ky66"]
+[ext_resource type="Texture2D" uid="uid://cmx7ophq1usp" path="res://Textures/Cartoon Mine Background.jpg" id="3_frqh3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5yqkc"]
 atlas = ExtResource("2_5ky66")
@@ -11,3 +12,5 @@ region = Rect2(256, 256, 256, 256)
 script = ExtResource("1_mn2cg")
 name = "Gold"
 sprite = SubResource("AtlasTexture_5yqkc")
+sell_price = 0
+work_background = ExtResource("3_frqh3")

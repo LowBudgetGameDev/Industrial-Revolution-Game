@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://dmw1eknf1l1bl"]
+[gd_scene load_steps=15 format=3 uid="uid://dmw1eknf1l1bl"]
 
+[ext_resource type="Texture2D" uid="uid://dkog0rns7jb73" path="res://Textures/Cartoon Warehouse Background.jpg" id="1_6g0e0"]
 [ext_resource type="FontFile" uid="uid://ci0jnk7m1rmj4" path="res://Fonts/Roboto-Regular.ttf" id="1_lanc6"]
 [ext_resource type="Script" path="res://Scripts/MoneyUI.gd" id="1_u7x7i"]
 [ext_resource type="FontFile" uid="uid://dtxa1ss1665cq" path="res://Fonts/Roboto-Light.ttf" id="2_mykey"]
@@ -81,6 +82,16 @@ anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6g0e0")
+expand_mode = 1
+
 [node name="MoneyUI" type="Control" parent="." node_paths=PackedStringArray("money_text")]
 anchors_preset = 0
 offset_right = 1280.0
@@ -91,6 +102,9 @@ money_text = NodePath("MoneyText")
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 177.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
 theme_override_fonts/normal_font = ExtResource("1_lanc6")
 theme_override_font_sizes/normal_font_size = 150
 bbcode_enabled = true
@@ -302,12 +316,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -93.0
-offset_top = -20.0
-offset_right = 93.0
-offset_bottom = 20.0
+offset_left = -283.0
+offset_top = -30.0
+offset_right = 300.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/normal_font = ExtResource("9_j5uky")
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
