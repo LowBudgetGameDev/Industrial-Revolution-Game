@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/ProductionUI.gd" id="3_kiki1"]
 [ext_resource type="FontFile" uid="uid://ceaodo6qajafb" path="res://Fonts/Roboto-Black.ttf" id="5_fp65d"]
 [ext_resource type="Script" path="res://Scripts/MarketUI.gd" id="6_gb3wx"]
-[ext_resource type="Texture2D" uid="uid://cvt35tnn2auol" path="res://up_arrow.svg" id="6_vpl7t"]
+[ext_resource type="Texture2D" uid="uid://cvt35tnn2auol" path="res://Textures/up_arrow.svg" id="6_vpl7t"]
 
 [sub_resource type="Animation" id="Animation_3uiaw"]
 resource_name = "CloseMarket"
