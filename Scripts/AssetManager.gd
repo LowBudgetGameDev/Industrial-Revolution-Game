@@ -2,7 +2,7 @@ extends Node
 
 class_name AssetManager
 
-enum Asset_Enum {Wheat, Sugar, Cotton, Coal, Steel, Gold, Paper, Glass, Textile, Brick, Gunpowder, Firearm}
+enum Asset_Enum {Sugar, Brick, Steel, Paper, Gunpowder, Cotton, Coal, Wheat, Glass, Gold, Textile, Firearm}
 
 static var instance : AssetManager
 

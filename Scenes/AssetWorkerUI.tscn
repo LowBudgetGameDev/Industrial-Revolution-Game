@@ -89,11 +89,6 @@ follow_focus = true
 [node name="WorkerContainer" type="HBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
 
-[node name="WorkerAmounts" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="ClickButton" type="TextureButton" parent="."]
 self_modulate = Color(1, 0, 0, 0.501961)
 layout_mode = 1

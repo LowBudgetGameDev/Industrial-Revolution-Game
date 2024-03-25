@@ -9,8 +9,8 @@
 script = ExtResource("1_f6cbr")
 name = "Immigrant"
 sprite = ExtResource("2_5u0ws")
-buy_price = 15
-salary = 3
+buy_price = 5.0
+salary = 0.5
 production_time_days = 3
 miner = ExtResource("2_bs1bm")
 farmer = ExtResource("1_u7gol")
