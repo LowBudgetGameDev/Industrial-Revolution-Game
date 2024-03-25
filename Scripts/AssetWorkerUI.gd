@@ -4,12 +4,13 @@ extends Control
 @export var asset_amount_text: RichTextLabel
 @export var work_asset: Asset
 @export var click_button : TextureButton
+@export var signal_emmiter : PackedScene
 
 var _worker_dictionary : Dictionary = {}
 
 func _ready():
 	click_button.pressed.connect(self._on_click)
-	move_child(click_button, 2)
+	move_child(click_button, 3)
 
 func init():
 	asset_icon.texture = work_asset.sprite
@@ -24,12 +25,20 @@ func _on_click():
 
 	if hired_ui.get_selected_worker() == null:
 		return
-    
+	
 	if _worker_dictionary.has(hired_ui.get_selected_worker()):
 		_worker_dictionary[hired_ui.get_selected_worker()] += 1
 	else:
 		_worker_dictionary[hired_ui.get_selected_worker()] = 1
 	
 	WorkerManager.instance.put_to_work(hired_ui.get_selected_worker())
+
+	var sig_emi = signal_emmiter.instantiate()
+	add_child(sig_emi)
+	sig_emi.emit_signal_every(hired_ui.get_selected_worker().production_time_days)
+	sig_emi.repeated_signal.connect(self._gain_asset)
 	
 	hired_ui.deselect_worker()
+
+func _gain_asset():
+	AssetManager.instance.increase_asset_amount(work_asset, 1)

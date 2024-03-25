@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://Scripts/TimeSignalEmitter.gd" id="1_01xxm"]
 
-[node name="SignalEmitter" type="Node2D"]
+[node name="SignalEmitter" type="Timer"]
 script = ExtResource("1_01xxm")

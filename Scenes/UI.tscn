@@ -125,7 +125,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_mykey")
 theme_override_font_sizes/font_size = 100
-text = "PRODUCE"
+text = "BEG"
 
 [node name="DelayBar" type="ProgressBar" parent="ProductionUI/ProductionButton"]
 modulate = Color(1, 0, 0, 1)
