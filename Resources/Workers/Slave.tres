@@ -10,9 +10,9 @@
 script = ExtResource("1_hlaeo")
 name = "Enslaved"
 sprite = ExtResource("2_jsxs4")
-buy_price = 7.0
-salary = 0.7
-production_time_days = 5
+buy_price = 15.0
+salary = 3.0
+production_time_days = 7.0
 miner = ExtResource("2_ijfh1")
 farmer = ExtResource("1_7gsw0")
 factory = ExtResource("1_aubip")

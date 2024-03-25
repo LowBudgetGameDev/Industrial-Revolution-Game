@@ -59,7 +59,7 @@ func _on_click():
 	var sig_emi = signal_emmiter.instantiate()
 	add_child(sig_emi)
 	sig_emi.resource = work_asset
-	sig_emi.emit_signal_every(hired_ui.get_selected_worker().production_time_days)
+	sig_emi.emit_signal_every(hired_ui.get_selected_worker().production_time_days * work_asset.work_speed_multiplier)
 	sig_emi.repeated_signal.connect(self._gain_asset)
 	
 	hired_ui.deselect_worker()
