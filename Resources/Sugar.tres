@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Asset" load_steps=4 format=3 uid="uid://bf32lsb0b78eb"]
+
+[ext_resource type="Script" path="res://Scripts/Asset.gd" id="1_4e3us"]
+[ext_resource type="Texture2D" uid="uid://cuhedfiy8cfl2" path="res://Textures/Resources.png" id="2_m0e03"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yqkc"]
+atlas = ExtResource("2_m0e03")
+region = Rect2(256, 0, 256, 256)
+
+[resource]
+script = ExtResource("1_4e3us")
+name = "Wheat"
+sprite = SubResource("AtlasTexture_5yqkc")
