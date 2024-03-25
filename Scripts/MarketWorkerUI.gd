@@ -21,5 +21,11 @@ func init():
 	human.set_scale(Vector2(0.25, 0.25))
 	human.set_position(Vector2(12, 12))
 
+func _process(delta):
+	if MoneyManager.instance.get_money_amount() >= worker.buy_price:
+		buy_button.disabled = false
+	else:
+		buy_button.disabled = true
+
 func buy_worker():
 	WorkerManager.instance.buy_worker(worker)
