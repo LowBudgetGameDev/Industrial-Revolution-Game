@@ -11,7 +11,7 @@ var _is_open := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_market_resource = preload("res://Scenes/MarketResourceUI.tscn")
+	_market_resource = preload("res://Scenes/MarketAssetUI.tscn")
 	_market_worker = preload("res://Scenes/MarketWorkerUI.tscn")
 
 	open_button.pressed.connect(self._toggle_ui)

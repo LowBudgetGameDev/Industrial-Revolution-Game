@@ -6,20 +6,28 @@ enum Asset {Wheat, Sugar, Cotton, Coal, Steel, Gold, Paper, Glass, Textile, Bric
 
 var instance: AssetManager
 
-var _resource_amount_dictionary : Dictionary
+var _asset_amount_dictionary : Dictionary
+var _asset_resource_dictionary : Dictionary
 
 func _init():
 	instance = self
 
-func _ready():
-	for resource in Asset.keys():
-		_resource_amount_dictionary[resource] = 0 
+	for asset in Asset.keys():
+		_asset_amount_dictionary[asset] = 0 
+	
+	for asset in Asset.keys():
+		var resource = load("res://Resources/" + str(asset) + ".tres")
+		_asset_resource_dictionary[asset] = resource
 
-func increase_resource_amount(resource: Asset, amount: int):
-	_resource_amount_dictionary[resource] += amount
 
-func decrease_resource_amount(resource: Asset, amount: int):
-	_resource_amount_dictionary[resource] -= amount
+func increase_asset_amount(asset: Asset, amount: int):
+	_asset_amount_dictionary[asset] += amount
 
-func get_resource_amount(resource: Asset) -> int:
-	return _resource_amount_dictionary[resource]
+func decrease_asset_amount(asset: Asset, amount: int):
+	_asset_amount_dictionary[asset] -= amount
+
+func get_asset_amount(asset: Asset) -> int:
+	return _asset_amount_dictionary[asset]
+
+func get_asset_resource(asset: Asset) -> Resource:
+	return _asset_resource_dictionary[asset]
