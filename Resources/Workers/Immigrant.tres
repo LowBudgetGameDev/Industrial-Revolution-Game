@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Worker" load_steps=2 format=3 uid="uid://c8srxss514ce6"]
+[gd_resource type="Resource" script_class="Worker" load_steps=3 format=3 uid="uid://c8srxss514ce6"]
 
 [ext_resource type="Script" path="res://Scripts/Worker.gd" id="1_f6cbr"]
+[ext_resource type="PackedScene" uid="uid://d0e0325pahdrx" path="res://Scenes/Humans/Immigrant.tscn" id="2_5u0ws"]
 
 [resource]
 script = ExtResource("1_f6cbr")
 name = "Immigrant"
+sprite = ExtResource("2_5u0ws")

@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Worker" load_steps=2 format=3 uid="uid://7snyddgru0de"]
+[gd_resource type="Resource" script_class="Worker" load_steps=3 format=3 uid="uid://7snyddgru0de"]
 
 [ext_resource type="Script" path="res://Scripts/Worker.gd" id="1_cgct0"]
+[ext_resource type="PackedScene" uid="uid://cpwbnemp1pynd" path="res://Scenes/Humans/Adult.tscn" id="2_6cptc"]
 
 [resource]
 script = ExtResource("1_cgct0")
 name = "Adult"
+sprite = ExtResource("2_6cptc")

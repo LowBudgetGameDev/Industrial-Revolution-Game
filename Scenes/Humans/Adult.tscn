@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpwbnemp1pynd"]
+
+[ext_resource type="Texture2D" uid="uid://ex0ydaurea2q" path="res://Textures/People.png" id="1_sscnb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1okm"]
+atlas = ExtResource("1_sscnb")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7fhp"]
+atlas = ExtResource("1_sscnb")
+region = Rect2(0, 256, 256, 256)
+
+[node name="Human" type="Control"]
+custom_minimum_size = Vector2(256, 384)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2624.0
+offset_bottom = -1236.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Body" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 384.0
+texture = SubResource("AtlasTexture_l1okm")
+
+[node name="Head" type="TextureRect" parent="."]
+layout_mode = 1
+offset_left = 32.0
+offset_right = 288.0
+offset_bottom = 256.0
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_h7fhp")
