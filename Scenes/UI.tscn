@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmw1eknf1l1bl"]
+[gd_scene load_steps=11 format=3 uid="uid://dmw1eknf1l1bl"]
 
 [ext_resource type="FontFile" uid="uid://ci0jnk7m1rmj4" path="res://Fonts/Roboto-Regular.ttf" id="1_lanc6"]
 [ext_resource type="Script" path="res://Scripts/MoneyUI.gd" id="1_u7x7i"]
 [ext_resource type="FontFile" uid="uid://dtxa1ss1665cq" path="res://Fonts/Roboto-Light.ttf" id="2_mykey"]
 [ext_resource type="Script" path="res://Scripts/ProductionUI.gd" id="3_kiki1"]
-[ext_resource type="FontFile" uid="uid://ceaodo6qajafb" path="res://Fonts/Roboto-Black.ttf" id="5_fp65d"]
 [ext_resource type="Script" path="res://Scripts/WorkerUI.gd" id="5_ifyan"]
 [ext_resource type="Script" path="res://Scripts/MarketUI.gd" id="6_gb3wx"]
 [ext_resource type="Texture2D" uid="uid://cvt35tnn2auol" path="res://Textures/up_arrow.svg" id="7_j40nc"]
@@ -161,18 +160,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SampleText" type="RichTextLabel" parent="ChildLaborUI/Background"]
-layout_mode = 2
-offset_right = 640.0
-offset_bottom = 1080.0
-theme_override_fonts/normal_font = ExtResource("5_fp65d")
-theme_override_font_sizes/normal_font_size = 150
-bbcode_enabled = true
-text = "[center]
-INSERT CHILD LABOR HERE"
-fit_content = true
-autowrap_mode = 2
-
 [node name="ScrollContainer" type="ScrollContainer" parent="ChildLaborUI"]
 layout_mode = 1
 anchors_preset = 15
@@ -227,32 +214,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarketUI/Background"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -799.0
-offset_top = -88.5
-offset_right = 799.0
-offset_bottom = 88.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/normal_font = ExtResource("5_fp65d")
-theme_override_font_sizes/normal_font_size = 150
-bbcode_enabled = true
-text = "[center] INSERT MARKET HERE"
-fit_content = true
-autowrap_mode = 0
-
 [node name="ScrollContainer" type="ScrollContainer" parent="MarketUI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -640.0
+offset_right = -670.0
 offset_bottom = -0.000244141
 grow_horizontal = 2
 grow_vertical = 2
