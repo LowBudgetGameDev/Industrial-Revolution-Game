@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://ci0jnk7m1rmj4" path="res://Fonts/Roboto-Regular.ttf" id="1_e46on"]
 [ext_resource type="Script" path="res://Scripts/AssetWorkerUI.gd" id="1_wyaby"]
 
-[node name="AssetWorkerUI" type="Control" node_paths=PackedStringArray("asset_icon", "asset_amount_text")]
+[node name="AssetWorkerUI" type="Control" node_paths=PackedStringArray("asset_icon", "asset_amount_text", "click_button")]
 custom_minimum_size = Vector2(640, 320)
 layout_mode = 3
 anchors_preset = 15
@@ -16,6 +16,7 @@ grow_vertical = 2
 script = ExtResource("1_wyaby")
 asset_icon = NodePath("AssetInfo/AssetIcon")
 asset_amount_text = NodePath("AssetInfo/AssetAmountText")
+click_button = NodePath("ClickButton")
 
 [node name="Background" type="Panel" parent="."]
 self_modulate = Color(0, 0, 1, 1)
@@ -58,3 +59,11 @@ theme_override_font_sizes/normal_font_size = 48
 text = "x999999999"
 fit_content = true
 autowrap_mode = 0
+
+[node name="ClickButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

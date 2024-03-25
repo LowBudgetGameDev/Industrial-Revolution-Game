@@ -33,6 +33,14 @@ func buy_worker(worker: Worker):
 	_hired_workers_dictionary[wor] += 1
 	on_hired_worker.emit()
 
+func put_to_work(worker: Worker):
+	var wor = _worker_resource_dictionary.find_key(worker)
+
+	_hired_workers_dictionary[wor] -= 1
+	_working_workers_dictionary[wor] += 1
+
+	on_hired_worker.emit()
+
 func get_worker_resource(worker: String) -> Worker:
 	return _worker_resource_dictionary[worker]
 

@@ -4,14 +4,18 @@ class_name HiredWorkerUI
 
 @export var amount_text : RichTextLabel
 @export var worker : Worker
+@export var hiredUI : HiredUI
 @export var background : Panel
 @export var click_button : TextureButton
+
+signal on_selected(hired_worker_ui : HiredWorkerUI)
 
 func _ready():
 	WorkerManager.instance.on_hired_worker.connect(self.update_text)
 
 	click_button.pressed.connect(self._on_clicked)
-	move_child(click_button, 999)
+	WorkerManager.instance.on_hired_worker.connect(self._deselect)
+	move_child(click_button, 3)
 
 func init():
 	update_text()
@@ -30,5 +34,15 @@ func update_text():
 func _on_clicked():
 	if WorkerManager.instance.get_amount_workers_hired(worker) == 0:
 		return
+	
+	if hiredUI.get_selected_worker() != null:
+		return
 
 	background.self_modulate = Color(0.5, 0.5, 0)
+	on_selected.emit(self)
+
+func _deselect():
+	background.self_modulate = Color(1, 1, 0)
+
+func get_worker():
+	return worker
