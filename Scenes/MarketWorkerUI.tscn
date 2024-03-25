@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://d3sur0ighbywx"]
+[gd_scene load_steps=3 format=3 uid="uid://d3sur0ighbywx"]
+
+[ext_resource type="PackedScene" uid="uid://bpx3he5kcmckm" path="res://Scenes/Human.tscn" id="1_l3lhr"]
+[ext_resource type="FontFile" uid="uid://dtxa1ss1665cq" path="res://Fonts/Roboto-Light.ttf" id="2_lavk4"]
 
 [node name="MarketWorkerUI" type="Control"]
 custom_minimum_size = Vector2(320, 120)
@@ -6,8 +9,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1920.0
-offset_bottom = -1080.0
+offset_right = -2560.0
+offset_bottom = -1500.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -20,20 +23,29 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+[node name="Human" parent="." instance=ExtResource("1_l3lhr")]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -149.5
-offset_top = -22.5
-offset_right = 149.5
-offset_bottom = 22.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 32
-text = "INSERT CHILD HERE"
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 268.0
+offset_bottom = 396.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(0.25, 0.25)
+
+[node name="WorkerName" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -225.0
+offset_bottom = 57.0
+grow_horizontal = 0
+theme_override_fonts/normal_font = ExtResource("2_lavk4")
+theme_override_font_sizes/normal_font_size = 48
+text = "CHILDREN"
 fit_content = true
 autowrap_mode = 0
