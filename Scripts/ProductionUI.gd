@@ -4,7 +4,7 @@ extends Control
 @export var delay_bar : ProgressBar
 
 var _delay = 1.0
-var _timer = 0.0
+var _timer = -0.01
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,13 +21,13 @@ func _process(delta):
 	_update_delay_bar()
 
 	if _timer < 0.0:
+		MoneyManager.instance.gain_money(1)
 		button.disabled = false
 
 func _produce():
 	if _timer > 0.0:
 		return
 
-	MoneyManager.instance.gain_money(1)
 	_timer += _delay
 
 	button.disabled = true
