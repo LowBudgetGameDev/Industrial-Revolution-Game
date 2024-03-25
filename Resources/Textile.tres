@@ -9,5 +9,5 @@ region = Rect2(0, 512, 256, 256)
 
 [resource]
 script = ExtResource("1_nrbjo")
-name = "Wheat"
+name = "Textile"
 sprite = SubResource("AtlasTexture_5yqkc")

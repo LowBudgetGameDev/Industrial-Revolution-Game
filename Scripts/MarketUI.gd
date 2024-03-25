@@ -16,8 +16,10 @@ func _ready():
 
 	open_button.pressed.connect(self._toggle_ui)
 
-	for resource in AssetManager.Asset:
+	for resource in AssetManager.Asset_Enum.keys():
 		var mar_res = _market_resource.instantiate()
+		mar_res.asset = AssetManager.instance._asset_resource_dictionary[resource]
+		mar_res.init()
 		market_asset_container.add_child(mar_res)
 	
 	for i in range(3):

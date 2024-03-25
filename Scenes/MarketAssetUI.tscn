@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://ca6vfu8uucny"]
+[gd_scene load_steps=3 format=3 uid="uid://ca6vfu8uucny"]
 
-[node name="MarketAssetUI" type="Control"]
+[ext_resource type="FontFile" uid="uid://dtxa1ss1665cq" path="res://Fonts/Roboto-Light.ttf" id="1_d6s7i"]
+[ext_resource type="Script" path="res://Scripts/MarketAssetUI.gd" id="1_ir5m4"]
+
+[node name="MarketAssetUI" type="Control" node_paths=PackedStringArray("assetImage", "assetNameText")]
 custom_minimum_size = Vector2(416, 160)
 layout_mode = 3
 anchors_preset = 15
@@ -10,6 +13,9 @@ offset_right = -1920.0
 offset_bottom = -1080.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ir5m4")
+assetImage = NodePath("AssetImage")
+assetNameText = NodePath("AssetName")
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(1, 0, 0, 1)
@@ -21,6 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -35,5 +42,31 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 28
 text = "INSERT BUY RESOURCE HERE "
+fit_content = true
+autowrap_mode = 0
+
+[node name="AssetImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -64.0
+offset_right = 140.0
+offset_bottom = 64.0
+grow_vertical = 2
+expand_mode = 1
+
+[node name="AssetName" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -264.0
+offset_bottom = 76.0
+grow_horizontal = 0
+theme_override_fonts/normal_font = ExtResource("1_d6s7i")
+theme_override_font_sizes/normal_font_size = 64
+text = "Resource"
 fit_content = true
 autowrap_mode = 0

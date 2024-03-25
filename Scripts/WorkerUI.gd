@@ -8,6 +8,6 @@ var _asset_worker : PackedScene
 func _ready():
 	_asset_worker = preload("res://Scenes/AssetWorkerUI.tscn")
 
-	for asset in AssetManager.Asset:
+	for asset in AssetManager.Asset_Enum:
 		var ass_wor = _asset_worker.instantiate()
 		asset_worker_container.add_child(ass_wor)
