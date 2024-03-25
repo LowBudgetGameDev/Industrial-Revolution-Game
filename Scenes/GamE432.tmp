@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds6dghea8wolt"]
+
+[ext_resource type="Texture2D" uid="uid://d35h6pu2nglsa" path="res://icon.svg" id="1_etfig"]
+[ext_resource type="Script" path="res://Scripts/ClickSprite.gd" id="2_855wn"]
+[ext_resource type="Script" path="res://Scripts/ScoreText.gd" id="3_eggx6"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_etfig")
+script = ExtResource("2_855wn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -561.0
+offset_top = -535.0
+offset_right = 561.0
+offset_bottom = -330.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 150
+text = "Clicked X Times"
+fit_content = true
+scroll_active = false
+script = ExtResource("3_eggx6")

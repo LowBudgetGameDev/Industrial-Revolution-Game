@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds6dghea8wolt"]
+
+[ext_resource type="Texture2D" uid="uid://d35h6pu2nglsa" path="res://icon.svg" id="1_etfig"]
+[ext_resource type="Script" path="res://Scripts/ClickSprite.gd" id="2_855wn"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_etfig")
+script = ExtResource("2_855wn")
