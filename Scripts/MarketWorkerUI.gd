@@ -2,8 +2,8 @@ extends Control
 
 class_name MarketWorkerUI
 
-@export var workerNameText : RichTextLabel
+@export var worker_name_text : RichTextLabel
 @export var worker : Worker
 
 func init():
-    workerNameText.text = worker.name
+	worker_name_text.text = worker.name

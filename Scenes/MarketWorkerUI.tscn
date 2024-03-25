@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/MarketWorkerUI.gd" id="1_t6bqr"]
 [ext_resource type="FontFile" uid="uid://dtxa1ss1665cq" path="res://Fonts/Roboto-Light.ttf" id="2_lavk4"]
 
-[node name="MarketWorkerUI" type="Control" node_paths=PackedStringArray("workerNameText")]
+[node name="MarketWorkerUI" type="Control" node_paths=PackedStringArray("worker_name_text")]
 custom_minimum_size = Vector2(320, 120)
 layout_mode = 3
 anchors_preset = 15
@@ -15,7 +15,7 @@ offset_bottom = -1500.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t6bqr")
-workerNameText = NodePath("WorkerName")
+worker_name_text = NodePath("WorkerName")
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(0, 1, 0, 1)
