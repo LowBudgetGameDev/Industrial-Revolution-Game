@@ -181,7 +181,7 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="ChildLaborUI/ScrollContainer"]
 layout_mode = 2
 
-[node name="MarketUI" type="Control" parent="." node_paths=PackedStringArray("open_button", "animation_player", "market_resource_container")]
+[node name="MarketUI" type="Control" parent="." node_paths=PackedStringArray("open_button", "animation_player", "market_resource_container", "market_worker_container")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -197,6 +197,7 @@ script = ExtResource("6_gb3wx")
 open_button = NodePath("OpenButton")
 animation_player = NodePath("AnimationPlayer")
 market_resource_container = NodePath("ScrollContainer/GridContainer")
+market_worker_container = NodePath("ScrollContainer2/GridContainer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MarketUI"]
 libraries = {
@@ -248,9 +249,24 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -640.0
+offset_bottom = -0.000244141
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="GridContainer" type="GridContainer" parent="MarketUI/ScrollContainer"]
 layout_mode = 2
 columns = 3
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="MarketUI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -640.0
+offset_bottom = 360.0
+grow_horizontal = 0
+
+[node name="GridContainer" type="GridContainer" parent="MarketUI/ScrollContainer2"]
+layout_mode = 2
+columns = 2
