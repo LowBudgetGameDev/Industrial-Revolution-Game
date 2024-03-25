@@ -8,6 +8,6 @@ var _resource_worker : PackedScene
 func _ready():
 	_resource_worker = preload("res://Scenes/ResourceWorkerUI.tscn")
 
-	for resource in ResourceManager.Resources:
+	for resource in ResourceManager.Asset:
 		var res_wor = _resource_worker.instantiate()
 		resource_worker_container.add_child(res_wor)

@@ -2,7 +2,7 @@ extends Control
 
 @export var open_button : TextureButton
 @export var animation_player : AnimationPlayer
-@export var market_resource_container : GridContainer
+@export var market_asset_container : GridContainer
 @export var market_worker_container : GridContainer
 
 var _market_resource : PackedScene
@@ -16,9 +16,9 @@ func _ready():
 
 	open_button.pressed.connect(self._toggle_ui)
 
-	for resource in ResourceManager.Resources:
+	for resource in AssetManager.Asset:
 		var mar_res = _market_resource.instantiate()
-		market_resource_container.add_child(mar_res)
+		market_asset_container.add_child(mar_res)
 	
 	for i in range(3):
 		var mar_wor = _market_worker.instantiate()
