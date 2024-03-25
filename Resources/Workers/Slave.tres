@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("1_hlaeo")
-name = "Slave"
+name = "Enslaved"
 sprite = ExtResource("2_jsxs4")
 buy_price = 3
 salary = 1

@@ -81,6 +81,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+mouse_filter = 1
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -233,6 +234,7 @@ offset_right = 960.0
 offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 1
 script = ExtResource("6_gb3wx")
 open_button = NodePath("OpenButton")
 animation_player = NodePath("AnimationPlayer")

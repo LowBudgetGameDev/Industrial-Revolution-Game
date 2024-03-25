@@ -7,8 +7,11 @@ extends Control
 @export var background : TextureRect
 @export var signal_emmiter : PackedScene
 @export var worker_group : HBoxContainer
+@export var block_panel : Panel
 
 var _worker_dictionary : Dictionary = {}
+
+var is_disabled := false
 
 func _ready():
 	click_button.pressed.connect(self._on_click)
@@ -19,6 +22,22 @@ func init():
 	background.texture = work_asset.work_background
 	asset_amount_text.text = "x" + str(AssetManager.instance.get_asset_amount(work_asset))
 	AssetManager.instance.on_asset_amount_changed.connect(self._update_text)
+
+	if MoneyManager.instance.get_money_amount() < work_asset.unlock_amount:
+		is_disabled = true
+		block_panel.modulate.a = 0.5
+	else:
+		block_panel.modulate.a = 0
+		block_panel.hide()
+
+func _process(_delta):
+	if !is_disabled:
+		return
+
+	if MoneyManager.instance.get_money_amount() >= work_asset.unlock_amount:
+		is_disabled = false
+		block_panel.modulate.a = 0
+		block_panel.hide()
 
 func _update_text():
 	asset_amount_text.text = "x" + str(AssetManager.instance.get_asset_amount(work_asset))

@@ -6,7 +6,7 @@ static var instance : MoneyManager
 
 signal on_money_amount_changed
 
-var _money : int
+var _money : float
 
 func _init():
 	instance = self
@@ -16,16 +16,16 @@ func _ready():
 	_money = 0
 	pass # Replace with function body.
 
-func can_spend_money(price: int) -> bool:
+func can_spend_money(price: float) -> bool:
 	return _money >= price
 
-func gain_money(amount : int):
+func gain_money(amount : float):
 	_money += amount
 	on_money_amount_changed.emit()
 
-func lose_money(amount: int):
+func lose_money(amount: float):
 	_money -= amount
 	on_money_amount_changed.emit()
 
-func get_money_amount() -> int:
-	return _money
+func get_money_amount() -> float:
+	return round(_money*100)/100

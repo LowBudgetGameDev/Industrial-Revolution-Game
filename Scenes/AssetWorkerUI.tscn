@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyvr0h13qjq25"]
+[gd_scene load_steps=6 format=3 uid="uid://cyvr0h13qjq25"]
 
 [ext_resource type="FontFile" uid="uid://ci0jnk7m1rmj4" path="res://Fonts/Roboto-Regular.ttf" id="1_e46on"]
 [ext_resource type="Script" path="res://Scripts/AssetWorkerUI.gd" id="1_wyaby"]
 [ext_resource type="PackedScene" uid="uid://d3mvnco5dxdek" path="res://Scenes/SignalEmitter.tscn" id="2_2x7rx"]
 [ext_resource type="Texture2D" uid="uid://t8wldb71dwi8" path="res://Textures/Cartoon Field Background.jpg" id="3_51mxx"]
 
-[node name="AssetWorkerUI" type="Control" node_paths=PackedStringArray("asset_icon", "asset_amount_text", "click_button", "background", "worker_group")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n24sw"]
+bg_color = Color(1, 0, 0, 0.501961)
+
+[node name="AssetWorkerUI" type="Control" node_paths=PackedStringArray("asset_icon", "asset_amount_text", "click_button", "background", "worker_group", "block_panel")]
 custom_minimum_size = Vector2(640, 320)
 layout_mode = 3
 anchors_preset = 15
@@ -22,6 +25,7 @@ click_button = NodePath("ClickButton")
 background = NodePath("Background")
 signal_emmiter = ExtResource("2_2x7rx")
 worker_group = NodePath("ScrollContainer/WorkerContainer")
+block_panel = NodePath("BlockPanel")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -85,6 +89,11 @@ follow_focus = true
 [node name="WorkerContainer" type="HBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
 
+[node name="WorkerAmounts" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="ClickButton" type="TextureButton" parent="."]
 self_modulate = Color(1, 0, 0, 0.501961)
 layout_mode = 1
@@ -94,3 +103,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch_mode = 0
+
+[node name="BlockPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_n24sw")

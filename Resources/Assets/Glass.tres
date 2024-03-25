@@ -15,3 +15,4 @@ sprite = SubResource("AtlasTexture_5yqkc")
 sell_price = 8
 work_background = ExtResource("3_0evti")
 type_of_worker = 2
+unlock_amount = 2000.0

@@ -32,12 +32,12 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -225.0
+offset_left = -231.0
 offset_bottom = 57.0
 grow_horizontal = 0
 theme_override_fonts/normal_font = ExtResource("2_lavk4")
 theme_override_font_sizes/normal_font_size = 48
-text = "CHILDREN"
+text = "ENSLAVED"
 fit_content = true
 autowrap_mode = 0
 

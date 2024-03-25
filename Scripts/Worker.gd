@@ -4,8 +4,8 @@ class_name Worker
 
 @export var name: String
 @export var sprite: PackedScene
-@export var buy_price: int
-@export var salary: int
-@export var production_time_days: int
+@export var buy_price: float
+@export var salary: float
+@export var production_time_days: float
 @export var miner: PackedScene
 @export var farmer: PackedScene

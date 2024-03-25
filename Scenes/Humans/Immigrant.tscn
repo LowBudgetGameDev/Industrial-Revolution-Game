@@ -8,7 +8,7 @@ region = Rect2(256, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7fhp"]
 atlas = ExtResource("1_n1h82")
-region = Rect2(256, 256, 256, 256)
+region = Rect2(0, 256, 256, 256)
 
 [node name="Human" type="Control"]
 custom_minimum_size = Vector2(256, 384)
