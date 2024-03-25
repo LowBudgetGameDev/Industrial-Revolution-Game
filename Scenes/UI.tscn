@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/ProductionUI.gd" id="3_kiki1"]
 [ext_resource type="FontFile" uid="uid://ceaodo6qajafb" path="res://Fonts/Roboto-Black.ttf" id="5_fp65d"]
 [ext_resource type="Script" path="res://Scripts/MarketUI.gd" id="6_gb3wx"]
-[ext_resource type="Texture2D" uid="uid://cvt35tnn2auol" path="res://Textures/up_arrow.svg" id="6_vpl7t"]
+[ext_resource type="Texture2D" uid="uid://cvt35tnn2auol" path="res://Textures/up_arrow.svg" id="7_j40nc"]
 
 [sub_resource type="Animation" id="Animation_3uiaw"]
 resource_name = "CloseMarket"
@@ -15,38 +15,26 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/path = NodePath("OpenButton:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -360), Vector2(0, 0)]
+"values": [3.14159, 0.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("OpenButton:position")
+tracks/1/path = NodePath(".:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(896, -488), Vector2(896, -128)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("OpenButton:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.25),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [3.14159, 0.0]
+"values": [Vector2(0, 720), Vector2(0, 1080)]
 }
 
 [sub_resource type="Animation" id="Animation_a67tw"]
@@ -56,38 +44,26 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/path = NodePath("OpenButton:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -360)]
+"values": [0.0, 3.14159]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("OpenButton:position")
+tracks/1/path = NodePath(".:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(896, -128), Vector2(896, -488)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("OpenButton:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.25),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 3.14159]
+"values": [Vector2(0, 1080), Vector2(0, 720)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kgprj"]
@@ -205,7 +181,7 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="ChildLaborUI/ScrollContainer"]
 layout_mode = 2
 
-[node name="MarketUI" type="Control" parent="." node_paths=PackedStringArray("open_button", "animation_player")]
+[node name="MarketUI" type="Control" parent="." node_paths=PackedStringArray("open_button", "animation_player", "market_resource_container")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -220,21 +196,12 @@ grow_vertical = 0
 script = ExtResource("6_gb3wx")
 open_button = NodePath("OpenButton")
 animation_player = NodePath("AnimationPlayer")
+market_resource_container = NodePath("ScrollContainer/GridContainer")
 
-[node name="PanelContainer" type="PanelContainer" parent="MarketUI"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarketUI/PanelContainer"]
-layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("5_fp65d")
-theme_override_font_sizes/normal_font_size = 150
-bbcode_enabled = true
-text = "[center] INSERT MARKET HERE"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarketUI"]
+libraries = {
+"": SubResource("AnimationLibrary_kgprj")
+}
 
 [node name="OpenButton" type="TextureButton" parent="MarketUI"]
 layout_mode = 1
@@ -246,9 +213,44 @@ offset_top = -128.0
 offset_right = 64.0
 grow_horizontal = 2
 pivot_offset = Vector2(64, 64)
-texture_normal = ExtResource("6_vpl7t")
+texture_normal = ExtResource("7_j40nc")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MarketUI"]
-libraries = {
-"": SubResource("AnimationLibrary_kgprj")
-}
+[node name="PanelContainer" type="Panel" parent="MarketUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarketUI/PanelContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -799.0
+offset_top = -88.5
+offset_right = 799.0
+offset_bottom = 88.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("5_fp65d")
+theme_override_font_sizes/normal_font_size = 150
+bbcode_enabled = true
+text = "[center] INSERT MARKET HERE"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarketUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarketUI/ScrollContainer"]
+layout_mode = 2
+columns = 3

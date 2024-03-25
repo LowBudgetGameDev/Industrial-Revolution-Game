@@ -2,15 +2,24 @@ extends Node
 
 class_name ResourceManager
 
-enum resource {Wheat, Sugar, Cotton, Coal, Steel, Gold, Paper, Glass, Textile, Brick, Gunpowder, Firearm}
+enum Resources {Wheat, Sugar, Cotton, Coal, Steel, Gold, Paper, Glass, Textile, Brick, Gunpowder, Firearm}
+
+var instance: ResourceManager
 
 var _resource_amount_dictionary : Dictionary
 
-# Called when the node enters the scene tree for the first time.
+func _init():
+	instance = self
+
 func _ready():
-	pass
+	for resource in Resources.keys():
+		_resource_amount_dictionary[resource] = 0 
 
+func increase_resource_amount(resource: Resources, amount: int):
+	_resource_amount_dictionary[resource] += amount
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func decrease_resource_amount(resource: Resources, amount: int):
+	_resource_amount_dictionary[resource] -= amount
+
+func get_resource_amount(resource: Resources) -> int:
+	return _resource_amount_dictionary[resource]
