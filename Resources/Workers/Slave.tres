@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Worker" load_steps=2 format=3 uid="uid://drpsfb0qivc7d"]
+
+[ext_resource type="Script" path="res://Scripts/Worker.gd" id="1_hlaeo"]
+
+[resource]
+script = ExtResource("1_hlaeo")
+name = "Slave"

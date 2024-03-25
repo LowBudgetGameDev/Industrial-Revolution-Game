@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ds6dghea8wolt"]
+[gd_scene load_steps=5 format=3 uid="uid://ds6dghea8wolt"]
 
 [ext_resource type="PackedScene" uid="uid://dmw1eknf1l1bl" path="res://Scenes/UI.tscn" id="1_6smyg"]
 [ext_resource type="Script" path="res://Scripts/MoneyManager.gd" id="2_6htfx"]
 [ext_resource type="Script" path="res://Scripts/AssetManager.gd" id="3_ya6bo"]
+[ext_resource type="Script" path="res://Scripts/WorkerManager.gd" id="4_a75lu"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,3 +28,6 @@ grow_vertical = 2
 
 [node name="AssetManager" type="Node2D" parent="."]
 script = ExtResource("3_ya6bo")
+
+[node name="WorkerManager" type="Node2D" parent="."]
+script = ExtResource("4_a75lu")

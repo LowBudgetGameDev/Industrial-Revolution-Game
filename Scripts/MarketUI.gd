@@ -18,12 +18,14 @@ func _ready():
 
 	for resource in AssetManager.Asset_Enum.keys():
 		var mar_res = _market_resource.instantiate()
-		mar_res.asset = AssetManager.instance._asset_resource_dictionary[resource]
+		mar_res.asset = AssetManager.instance.get_asset_resource(resource)
 		mar_res.init()
 		market_asset_container.add_child(mar_res)
 	
-	for i in range(3):
+	for human in WorkerManager.Worker_Enum.keys():
 		var mar_wor = _market_worker.instantiate()
+		mar_wor.worker = WorkerManager.instance.get_worker_resource(human)
+		mar_wor.init()
 		market_worker_container.add_child(mar_wor)
 
 func _toggle_ui():
