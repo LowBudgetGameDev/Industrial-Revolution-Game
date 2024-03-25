@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3sur0ighbywx"]
+[gd_scene load_steps=4 format=3 uid="uid://d3sur0ighbywx"]
 
 [ext_resource type="Script" path="res://Scripts/MarketWorkerUI.gd" id="1_t6bqr"]
 [ext_resource type="FontFile" uid="uid://dtxa1ss1665cq" path="res://Fonts/Roboto-Light.ttf" id="2_lavk4"]
+[ext_resource type="FontFile" uid="uid://poucd4nk36fw" path="res://Fonts/Roboto-Medium.ttf" id="3_rn346"]
 
-[node name="MarketWorkerUI" type="Control" node_paths=PackedStringArray("worker_name_text")]
+[node name="MarketWorkerUI" type="Control" node_paths=PackedStringArray("worker_name_text", "buy_button")]
 custom_minimum_size = Vector2(320, 120)
 layout_mode = 3
 anchors_preset = 15
@@ -15,6 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t6bqr")
 worker_name_text = NodePath("WorkerName")
+buy_button = NodePath("BuyButton")
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(0, 1, 0, 1)
@@ -38,3 +40,18 @@ theme_override_font_sizes/normal_font_size = 48
 text = "CHILDREN"
 fit_content = true
 autowrap_mode = 0
+
+[node name="BuyButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -232.0
+offset_top = -65.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_rn346")
+theme_override_font_sizes/font_size = 48
+text = "BUY NOW!"

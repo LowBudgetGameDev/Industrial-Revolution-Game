@@ -7,3 +7,5 @@
 script = ExtResource("1_f6cbr")
 name = "Immigrant"
 sprite = ExtResource("2_5u0ws")
+buy_price = 15
+salary = 3.0

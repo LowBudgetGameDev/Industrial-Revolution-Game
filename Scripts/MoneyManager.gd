@@ -16,6 +16,9 @@ func _ready():
 	_money = 0
 	pass # Replace with function body.
 
+func can_spend_money(price: int) -> bool:
+	return _money >= price
+
 func gain_money(amount : int):
 	_money += amount
 	on_money_amount_changed.emit()

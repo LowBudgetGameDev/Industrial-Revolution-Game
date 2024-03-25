@@ -4,7 +4,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1okm"]
 atlas = ExtResource("1_n1h82")
-region = Rect2(0, 0, 256, 256)
+region = Rect2(256, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7fhp"]
 atlas = ExtResource("1_n1h82")
@@ -16,8 +16,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1920.0
-offset_bottom = -1080.0
+offset_right = -2624.0
+offset_bottom = -1236.0
 grow_horizontal = 2
 grow_vertical = 2
 
