@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmw1eknf1l1bl"]
+[gd_scene load_steps=14 format=3 uid="uid://dmw1eknf1l1bl"]
 
 [ext_resource type="FontFile" uid="uid://ci0jnk7m1rmj4" path="res://Fonts/Roboto-Regular.ttf" id="1_lanc6"]
 [ext_resource type="Script" path="res://Scripts/MoneyUI.gd" id="1_u7x7i"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" path="res://Scripts/MarketUI.gd" id="6_gb3wx"]
 [ext_resource type="Script" path="res://Scripts/HiredUI.gd" id="6_yig5t"]
 [ext_resource type="Texture2D" uid="uid://cvt35tnn2auol" path="res://Textures/up_arrow.svg" id="7_j40nc"]
+[ext_resource type="FontFile" uid="uid://bpo30am2honvw" path="res://Fonts/Roboto-Bold.ttf" id="9_j5uky"]
+[ext_resource type="Script" path="res://Scripts/TimeUI.gd" id="9_k6qdw"]
 
 [sub_resource type="Animation" id="Animation_3uiaw"]
 resource_name = "CloseMarket"
@@ -274,3 +276,39 @@ horizontal_scroll_mode = 0
 [node name="MarketWorkerContainer" type="GridContainer" parent="MarketUI/ScrollContainer2"]
 layout_mode = 2
 columns = 2
+
+[node name="TimeUI" type="Control" parent="." node_paths=PackedStringArray("time_text")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -360.0
+offset_right = -320.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_k6qdw")
+time_text = NodePath("TimeText")
+
+[node name="TimeText" type="RichTextLabel" parent="TimeUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -20.0
+offset_right = 93.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("9_j5uky")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center]999999 years; 9871 days"
+fit_content = true
+autowrap_mode = 0
