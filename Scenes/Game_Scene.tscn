@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ds6dghea8wolt"]
+[gd_scene load_steps=7 format=3 uid="uid://ds6dghea8wolt"]
 
 [ext_resource type="PackedScene" uid="uid://dmw1eknf1l1bl" path="res://Scenes/UI.tscn" id="1_6smyg"]
 [ext_resource type="Script" path="res://Scripts/MoneyManager.gd" id="2_6htfx"]
 [ext_resource type="Script" path="res://Scripts/AssetManager.gd" id="3_ya6bo"]
 [ext_resource type="Script" path="res://Scripts/WorkerManager.gd" id="4_a75lu"]
 [ext_resource type="Script" path="res://Scripts/TimeManager.gd" id="5_d1f7y"]
+[ext_resource type="PackedScene" uid="uid://d3mvnco5dxdek" path="res://Scenes/SignalEmitter.tscn" id="5_kwxk8"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -32,6 +33,7 @@ script = ExtResource("3_ya6bo")
 
 [node name="WorkerManager" type="Node2D" parent="."]
 script = ExtResource("4_a75lu")
+signal_emmiter = ExtResource("5_kwxk8")
 
 [node name="TimeManager" type="Node2D" parent="."]
 script = ExtResource("5_d1f7y")

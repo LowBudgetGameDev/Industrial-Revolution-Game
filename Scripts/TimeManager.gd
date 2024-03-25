@@ -26,6 +26,9 @@ func _process(delta):
     if _days % 364 == 0:
         _days = 0
 
+func days_to_seconds(days: int) -> float:
+    return days * _seconds_per_day
+
 func get_days() -> int:
     return _days
 

@@ -26,7 +26,7 @@ _data = {
 }
 
 [node name="Farmer" type="Control"]
-custom_minimum_size = Vector2(225, 225)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,31 +36,26 @@ offset_bottom = -1620.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Person" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Human" parent="Person" instance=ExtResource("1_upjot")]
+[node name="Human" parent="." instance=ExtResource("1_upjot")]
 layout_mode = 1
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 97.0
-offset_top = 33.0
-offset_right = 353.0
-offset_bottom = 417.0
+offset_left = 60.4
+offset_top = 15.6
+offset_right = 316.4
+offset_bottom = 399.6
 grow_horizontal = 1
 grow_vertical = 1
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.35, 0.35)
 
 [node name="Hoe" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 47.5
-offset_top = 63.5
-offset_right = 175.5
-offset_bottom = 191.5
-pivot_offset = Vector2(64, 116)
+offset_left = 25.0
+offset_top = 37.0
+offset_right = 115.0
+offset_bottom = 127.0
+pivot_offset = Vector2(45, 80)
 texture = ExtResource("2_dxjwe")
 expand_mode = 1
 

@@ -12,5 +12,5 @@ region = Rect2(256, 0, 256, 256)
 script = ExtResource("1_4e3us")
 name = "Sugar"
 sprite = SubResource("AtlasTexture_5yqkc")
-sell_price = 0
+sell_price = 5
 work_background = ExtResource("3_cveb3")

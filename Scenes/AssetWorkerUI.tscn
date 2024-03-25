@@ -74,33 +74,35 @@ text = "x999999999"
 fit_content = true
 autowrap_mode = 0
 
-[node name="ClickButton" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
-offset_left = 64.0
-offset_top = 80.0
-offset_right = 624.0
-offset_bottom = 305.0
+offset_left = 12.0
+offset_top = 120.0
+offset_right = 632.0
+offset_bottom = 270.0
 follow_focus = true
 
 [node name="WorkerContainer" type="HBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
 
 [node name="Miner" parent="ScrollContainer/WorkerContainer" instance=ExtResource("4_coo4r")]
-visible = false
 layout_mode = 2
 
 [node name="Miner2" parent="ScrollContainer/WorkerContainer" instance=ExtResource("4_coo4r")]
-visible = false
 layout_mode = 2
 
 [node name="Miner3" parent="ScrollContainer/WorkerContainer" instance=ExtResource("4_coo4r")]
-visible = false
 layout_mode = 2
+
+[node name="Miner4" parent="ScrollContainer/WorkerContainer" instance=ExtResource("4_coo4r")]
+layout_mode = 2
+
+[node name="ClickButton" type="TextureButton" parent="."]
+self_modulate = Color(1, 0, 0, 0.501961)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 0

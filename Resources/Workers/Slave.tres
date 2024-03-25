@@ -8,5 +8,5 @@ script = ExtResource("1_hlaeo")
 name = "Slave"
 sprite = ExtResource("2_jsxs4")
 buy_price = 3
-salary = 0
+salary = 1
 production_time_days = 5

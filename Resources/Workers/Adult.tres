@@ -8,5 +8,5 @@ script = ExtResource("1_cgct0")
 name = "Adult"
 sprite = ExtResource("2_6cptc")
 buy_price = 50
-salary = 0
+salary = 10
 production_time_days = 1

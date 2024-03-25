@@ -42,6 +42,9 @@ func _on_clicked():
 	on_selected.emit(self)
 
 func _deselect():
+	if WorkerManager.instance.get_amount_workers_hired(worker) > 0:
+		return
+
 	background.self_modulate = Color(1, 1, 0)
 
 func get_worker():

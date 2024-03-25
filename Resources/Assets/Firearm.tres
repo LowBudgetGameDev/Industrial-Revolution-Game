@@ -12,5 +12,5 @@ region = Rect2(768, 512, 256, 256)
 script = ExtResource("1_pb7b4")
 name = "Firearm"
 sprite = SubResource("AtlasTexture_5yqkc")
-sell_price = 0
+sell_price = 30
 work_background = ExtResource("3_ukdsh")

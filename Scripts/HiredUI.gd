@@ -27,6 +27,9 @@ func _set_selected_worker(hired_worker_ui : HiredWorkerUI):
 	_selected_worker = hired_worker_ui.get_worker()
 
 func deselect_worker():
+	if WorkerManager.instance.get_amount_workers_hired(_selected_worker) > 0:
+		return
+
 	_selected_worker = null
 
 func get_selected_worker() -> Worker:

@@ -6,6 +6,8 @@ enum Worker_Enum {Child, Slave, Immigrant, Adult}
 
 static var instance : WorkerManager
 
+@export var signal_emmiter : PackedScene
+
 signal on_hired_worker
 
 var _hired_workers_dictionary : Dictionary = {}
@@ -39,7 +41,16 @@ func put_to_work(worker: Worker):
 	_hired_workers_dictionary[wor] -= 1
 	_working_workers_dictionary[wor] += 1
 
+	var sig_emi = signal_emmiter.instantiate()
+	add_child(sig_emi)
+	sig_emi.resource = worker
+	sig_emi.emit_signal_every(7)
+	sig_emi.repeated_signal.connect(self._pay_worker)
+
 	on_hired_worker.emit()
+
+func _pay_worker(worker: Worker):
+	MoneyManager.instance.lose_money(worker.salary)
 
 func get_worker_resource(worker: String) -> Worker:
 	return _worker_resource_dictionary[worker]
