@@ -37,4 +37,4 @@ func _update_delay_bar():
 		delay_bar.value = 0
 		return
 
-	delay_bar.value = _timer / _delay
+	delay_bar.value = (_delay - _timer) / _delay
