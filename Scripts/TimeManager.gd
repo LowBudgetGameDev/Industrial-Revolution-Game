@@ -6,7 +6,7 @@ static var instance
 
 var _seconds_per_year := 300.0
 var _seconds_per_day : float
-var _timer := 290.0
+var _timer := 0.0
 var _days := 0
 var _years := 0
 
