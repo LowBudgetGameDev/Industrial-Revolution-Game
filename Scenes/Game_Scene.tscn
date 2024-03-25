@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dmw1eknf1l1bl" path="res://Scenes/UI.tscn" id="1_6smyg"]
 [ext_resource type="Script" path="res://Scripts/MoneyManager.gd" id="2_6htfx"]
-[ext_resource type="Script" path="res://Scripts/ResourceManager.gd" id="3_higmt"]
+[ext_resource type="Script" path="res://Scripts/AssetManager.gd" id="3_ya6bo"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -24,5 +24,5 @@ offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ResourceManager" type="Node2D" parent="."]
-script = ExtResource("3_higmt")
+[node name="AssetManager" type="Node2D" parent="."]
+script = ExtResource("3_ya6bo")

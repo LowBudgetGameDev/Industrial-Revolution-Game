@@ -1,13 +1,13 @@
 extends Control
 
-@export var resource_worker_container : VBoxContainer
+@export var asset_worker_container : VBoxContainer
 
-var _resource_worker : PackedScene
+var _asset_worker : PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_resource_worker = preload("res://Scenes/ResourceWorkerUI.tscn")
+	_asset_worker = preload("res://Scenes/AssetWorkerUI.tscn")
 
-	for resource in ResourceManager.Asset:
-		var res_wor = _resource_worker.instantiate()
-		resource_worker_container.add_child(res_wor)
+	for asset in AssetManager.Asset:
+		var ass_wor = _asset_worker.instantiate()
+		asset_worker_container.add_child(ass_wor)
