@@ -36,8 +36,10 @@ func buy_worker(worker: Worker):
 func get_worker_resource(worker: String) -> Worker:
 	return _worker_resource_dictionary[worker]
 
-func get_amount_workers_hired(worker: String) -> int:
-	return _hired_workers_dictionary[worker]
+func get_amount_workers_hired(worker: Worker) -> int:
+	var wor = _worker_resource_dictionary.find_key(worker)
+	return _hired_workers_dictionary[wor]
 
-func get_amount_working_workers(worker: String) -> int:
-	return _working_workers_dictionary[worker]
+func get_amount_working_workers(worker: Worker) -> int:
+	var wor = _worker_resource_dictionary.find_key(worker)
+	return _working_workers_dictionary[wor]

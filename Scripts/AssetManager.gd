@@ -20,14 +20,17 @@ func _init():
 		_asset_resource_dictionary[asset] = resource
 
 
-func increase_asset_amount(asset: String, amount: int):
-	_asset_amount_dictionary[asset] += amount
+func increase_asset_amount(asset: Asset, amount: int):
+	var ass = _asset_resource_dictionary.find_key(asset)
+	_asset_amount_dictionary[ass] += amount
 
-func decrease_asset_amount(asset: String, amount: int):
-	_asset_amount_dictionary[asset] -= amount
+func decrease_asset_amount(asset: Asset, amount: int):
+	var ass = _asset_resource_dictionary.find_key(asset)
+	_asset_amount_dictionary[ass] -= amount
 
-func get_asset_amount(asset: String) -> int:
-	return _asset_amount_dictionary[asset]
+func get_asset_amount(asset: Asset) -> int:
+	var ass = _asset_resource_dictionary.find_key(asset)
+	return _asset_amount_dictionary[ass]
 
 func get_asset_resource(asset: String) -> Asset:
 	return _asset_resource_dictionary[asset]

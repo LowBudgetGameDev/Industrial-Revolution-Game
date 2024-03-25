@@ -9,6 +9,6 @@ func _ready():
 
     for human in WorkerManager.Worker_Enum.keys():
         var hir_wor = _hired_worker.instantiate()
-        hir_wor.worker = human
+        hir_wor.worker = WorkerManager.instance.get_worker_resource(human)
         hir_wor.init()
         hired_worker_container.add_child(hir_wor)
